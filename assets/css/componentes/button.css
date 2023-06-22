@@ -24,6 +24,7 @@
 
 .simple-button--delete {
   color: var(--info-color);
+  cursor: pointer;
 }
 
 .simple-button--edit {
