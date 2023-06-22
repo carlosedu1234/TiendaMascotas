@@ -1,11 +1,10 @@
 import { listaClientes } from "../service/service-cliente.js"
 
-console.log(listaClientes);
 
 const personas = document.querySelector("[data-personas]");
 
 const insertarPersona = (nombre, correo,id) => {
-    console.log(id);
+
     const nuevoDato = document.createElement("tr");
     const contenido = `
     <td class="td" data-td>${nombre}</td>
@@ -13,7 +12,7 @@ const insertarPersona = (nombre, correo,id) => {
     <td>
       <ul class="table__button-control">
         <li>
-          <a href="../screens/editar_cliente.html" class="simple-button simple-button--edit">Editar</a>
+          <a href="../screens/editar_cliente.html?id=${id}" class="simple-button simple-button--edit">Editar</a>
         </li>
         <li>
           <button class="simple-button simple-button--delete" type="button" id=${id}>Eliminar</button>
