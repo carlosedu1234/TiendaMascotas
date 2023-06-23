@@ -2,7 +2,7 @@
   "perfil": [
     {
       "nombre": "carlos",
-      "email": "eduar9908@gmail.com",
+      "email": "rodri@gmail.com",
       "id": "c5de7883-8057-476d-bbfc-3f0c53ce6e64"
     },
     {
@@ -14,6 +14,21 @@
       "nombre": "marcos",
       "email": "dsf@sdf.sdf",
       "id": "b3d19d73-e2b6-46d9-afe2-0596ccfeecab"
+    },
+    {
+      "nombre": "cardoso",
+      "email": "camilo9908@gmail.com",
+      "id": "d170673e-779b-4111-9ef9-e56c6b90d288"
+    },
+    {
+      "nombre": "deici",
+      "email": "dsf@sdf.sdf",
+      "id": "52edfbe4-ef09-4855-82e4-d0aba1d79dec"
+    },
+    {
+      "nombre": "carlos",
+      "email": "eduar9908@gmail.com",
+      "id": "c807fd91-1e10-4f75-8480-643a4654cbdc"
     }
   ]
 }

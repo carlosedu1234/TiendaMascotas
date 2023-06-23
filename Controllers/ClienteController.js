@@ -1,12 +1,10 @@
-import { listaClientes } from "../service/service-cliente.js"
-
+import { listaClientes } from "../service/service-cliente.js";
 
 const personas = document.querySelector("[data-personas]");
 
-const insertarPersona = (nombre, correo,id) => {
-
-    const nuevoDato = document.createElement("tr");
-    const contenido = `
+const insertarPersona = (nombre, correo, id) => {
+  const nuevoDato = document.createElement("tr");
+  const contenido = `
     <td class="td" data-td>${nombre}</td>
     <td>${correo}</td>
     <td>
@@ -20,30 +18,33 @@ const insertarPersona = (nombre, correo,id) => {
       </ul>
     </td>
   `;
-    nuevoDato.innerHTML = contenido;
+  nuevoDato.innerHTML = contenido;
 
-const btn=nuevoDato.querySelector("button");
+  const btn = nuevoDato.querySelector("button");
 
-btn.addEventListener("click", ()=>{
-const id=btn.id;
-listaClientes.eliminarCliente(id).then((cliente)=>{console.log(cliente)})
-.catch(error=>{alert(error.message)})
+  btn.addEventListener("click", async () => {
+    const id = btn.id;
+    try {
+      const cliente = await listaClientes.eliminarCliente(id);
+      console.log(cliente);
+    } catch (error) {
+      alert(error.message);
+    }
+  });
 
-});
-
-    return nuevoDato;
+  return nuevoDato;
 };
 
-
-
-
-listaClientes.listaCliente()
-    .then((data) => {
-        data.forEach(({nombre,email,id}) => {
-            const nuevoDato = insertarPersona(nombre, email ,id);
-            personas.appendChild(nuevoDato);
-        });
-    })
-    .catch((error) => {
-        alert("Ocurrió un error" + error);
+const cargarClientes = async () => {
+  try {
+    const data = await listaClientes.listaCliente();
+    data.forEach(({ nombre, email, id }) => {
+      const nuevoDato = insertarPersona(nombre, email, id);
+      personas.appendChild(nuevoDato);
     });
+  } catch (error) {
+    alert("Ocurrió un error: " + error);
+  }
+};
+
+cargarClientes();

@@ -1,0 +1,19 @@
+{
+  "perfil": [
+    {
+      "nombre": "carlos",
+      "email": "eduar9908@gmail.com",
+      "id": "c5de7883-8057-476d-bbfc-3f0c53ce6e64"
+    },
+    {
+      "nombre": "mario",
+      "email": "mendoza@gmail.com",
+      "id": "cab97b0c-899b-4be5-a739-a151262feb94"
+    },
+    {
+      "nombre": "marcos",
+      "email": "dsf@sdf.sdf",
+      "id": "b3d19d73-e2b6-46d9-afe2-0596ccfeecab"
+    }
+  ]
+}
